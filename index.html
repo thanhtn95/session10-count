@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("Enter a number to count: ");
+
+    function randomArr() {
+        let tmp=[];
+        for(let i = 0; i<50;i++){
+            tmp.push(Math.floor(Math.random()*101));
+        }
+        return tmp;
+    }
+
+    function count(input,arr) {
+        let count =0;
+        for(let i =0; i<arr.length;i++){
+            if(arr[i] == input){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    let arr = randomArr();
+    document.write(arr+'<br>');
+    document.write('There are '+count(input,arr)+' number '+input);
+</script>
+</body>
+</html>
